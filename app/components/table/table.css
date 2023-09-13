@@ -1,0 +1,176 @@
+.table {
+  max-width: 1264px;
+  max-height: 100%;
+}
+
+#overlay {
+  position: absolute;
+  width: 100%;
+  max-width: 1264px;
+
+  height: 100%;
+  background: #ffdbdb;
+  z-index: 1;
+}
+
+.content {
+  width: 100%;
+  height: max-content;
+  padding: 1em 0;
+
+  padding: 42px;
+}
+
+.content > * {
+  position: relative;
+  z-index: 3;
+  color: #171414;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: #6a6a6a;
+  margin: 0.2em 0;
+}
+
+.nav {
+  text-transform: capitalize;
+}
+
+.nav-divider {
+  margin-top: 1em;
+}
+
+.row {
+  width: 100%;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+}
+
+.row:first-child {
+  height: 0px;
+}
+
+.row > .col {
+  position: relative;
+  flex: 1;
+}
+
+.row > .col:last-child {
+  max-width: 80px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.details-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.details-ticket-btn {
+  display: none;
+}
+
+.details-col-active {
+  gap: 170px !important;
+}
+
+.details-ticket-btn-active {
+  display: flex;
+  align-items: center;
+}
+
+.details-col:hover > .details-col-btn {
+  color: #0075ff;
+}
+
+.details-col-btn {
+  background: transparent;
+  border: none;
+  color: #171414;
+}
+
+.row-active {
+  height: 100%;
+  align-items: flex-start;
+}
+
+.details-block {
+  display: none;
+}
+.details-block-active {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+
+  margin-top: 28px;
+}
+
+.details-ticket-btn-active:hover {
+  color: #0075ff;
+}
+@media screen and (min-width: 0px) {
+  #overlay,
+  .table {
+    max-width: 780px;
+  }
+
+  .row > .col {
+    font-size: 14px;
+  }
+
+  .content {
+    padding: 42px 6px;
+  }
+
+  .col-venue {
+    display: none;
+  }
+
+  .col-supporting-act {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 395px) {
+  #overlay,
+  .table {
+    max-width: 780px;
+  }
+
+  .row > .col {
+    font-size: 14px;
+  }
+
+  .content {
+    padding: 42px 6px;
+  }
+
+  .col-venue {
+    display: block;
+  }
+
+  .col-supporting-act {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 835px) {
+  #overlay,
+  .table {
+    max-width: 1264px;
+  }
+
+  .row > .col {
+    font-size: 16px;
+  }
+
+  .content {
+    padding: 42px;
+  }
+}

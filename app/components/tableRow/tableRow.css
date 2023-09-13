@@ -1,0 +1,159 @@
+.row {
+  width: 100%;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+}
+
+.row:first-child {
+  height: 0px;
+}
+
+.row > .col {
+  position: relative;
+  flex: 1;
+}
+
+.row > .col:last-child {
+  max-width: 80px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.details-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.details-ticket-btn {
+  display: none;
+}
+
+.details-col-active {
+  gap: 170px !important;
+}
+
+.details-ticket-btn-active {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+  font-size: 14px;
+
+  transition: color 0.5s;
+}
+
+.details-col:hover > .details-col-btn {
+  color: #0075ff;
+}
+
+.details-col-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  background: transparent;
+  border: none;
+  color: #171414;
+
+  transition: color 0.5s;
+}
+
+.row-active {
+  height: 100%;
+  align-items: flex-start;
+}
+
+.details-block {
+  display: none;
+}
+.details-block-active {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+
+  margin-top: 28px;
+}
+
+.details-ticket-btn-active:hover {
+  color: #0075ff;
+}
+
+.ticket-col {
+  transition: color 0.5s;
+}
+
+.ticket-col:hover {
+  color: #0075ff;
+}
+
+@media screen and (min-width: 0px) {
+  #overlay,
+  .table {
+    max-width: 780px;
+  }
+
+  .row > .col {
+    font-size: 14px;
+  }
+
+  .content {
+    padding: 42px 6px;
+  }
+
+  .is-mobile {
+    display: none;
+  }
+
+  .is-mobile-ticket {
+    display: none !important;
+  }
+
+  .is-mobile-details {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 395px) {
+  #overlay,
+  .table {
+    max-width: 780px;
+  }
+
+  .row > .col {
+    font-size: 14px;
+  }
+
+  .content {
+    padding: 42px 6px;
+  }
+  .is-mobile {
+    display: block;
+  }
+
+  .is-mobile-ticket {
+    display: flex !important;
+  }
+
+  .is-mobile-details {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 835px) {
+  #overlay,
+  .table {
+    max-width: 1264px;
+  }
+
+  .row > .col {
+    font-size: 16px;
+  }
+
+  .content {
+    padding: 42px;
+  }
+}
